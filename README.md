@@ -1,2 +1,2 @@
-# PPADS-PROJETC
-Projeto de Práticas Profissionais em Analises de Desenvolvimento de Sistemas 
+# Projeto de Pratica Profissional
+## Grupo Everton e Mariane 
