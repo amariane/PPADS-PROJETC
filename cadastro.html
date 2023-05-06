@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Cadastro de Paciente</title>
+    <style>
+      body {
+        background-image: url("https://www.hospitalmoinhos.org.br/media/13693d2d-c746-4eb5-b454-57ef32e3119c.jpg");
+        background-size: cover;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        width: 500px;
+      }
+      input[type="text"], input[type="number"], select {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        border: 2px solid #ccc;
+        border-radius: 4px;
+        background-color: #f8f8f8;
+        font-size: 16px;
+      }
+      input[type="submit"] {
+        width: 100%;
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+      input[type="submit"]:hover {
+        background-color: #45a049;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <h2>Cadastro de Paciente</h2>
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" required>
+      <label for="cpf">CPF:</label>
+      <input type="text" id="cpf" name="cpf" required>
+      <label for="endereco">Endereço:</label>
+      <input type="text" id="endereco" name="endereco" required>
+      <label for="idade">Idade:</label>
+      <input type="number" id="idade" name="idade" min="0" max="150" required>
+      <label for="sexo">Sexo:</label>
+      <select id="sexo" name="sexo">
+        <option value="masculino">Masculino</option>
+        <option value="feminino">Feminino</option>
+        <option value="outro">Outro</option>
+      </select>
+      <label for="convenio">Número do Convênio:</label>
+      <input type="text" id="convenio" name="convenio" required>
+      <input type="submit" value="Cadastrar">
+    </form>
+    <script>
+      const form = document.querySelector('form');
+      form.addEventListener('submit', (event) => {
+        event.preventDefault();
+        const nome = document.querySelector('#nome').value;
+        const cpf = document.querySelector('#cpf').value;
+        const endereco = document.querySelector('#endereco').value;
+        const idade = document.querySelector('#idade').value;
+        const sexo = document.querySelector('#sexo').value;
+        const convenio = document.querySelector('#convenio').value;
+        console.log(nome, cpf, endereco, idade, sexo, convenio);
+      });
+     </script>
+     </body>
+</html>
